@@ -101,8 +101,7 @@ function minNumber(numbers) {
     }
     return value;
 }
-
-minNumber([])
+console.log(minNumber([10,5,7,9]))
 
 // - Створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його.
 //   Приклад sum([1,2,10]) //->13
@@ -110,11 +109,11 @@ minNumber([])
 function sum(arr) {
     let massNumbers = 0;
     for (let arrElement of arr) {
-        massNumbers = massNumbers + arr;
+        massNumbers = massNumbers + arrElement;
     }
     return massNumbers;
 }
-
+console.log(sum([1,2,10]))
 // - Створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відповідних індексах:
 //   Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
 function swap(arr, index1, index2) {
@@ -134,11 +133,13 @@ console.log(swap([11, 22, 33, 44], 0, 1))
 function exchange(sumUAH, currencyValues, exchangeCurrency) {
 
     for (const nameCurrency of currencyValues) {
-        if (nameCurrency === exchangeCurrency)
+        if (nameCurrency.currency === exchangeCurrency)
             return sumUAH/nameCurrency.value
-            }
+    }
 
 }
 
-exchange(10000, [{currency: 'USD', value: 40}, {currency: 'EUR', value: 42}], 'USD')
+console.log(
+    exchange(10000, [{currency: 'USD', value: 40}, {currency: 'EUR', value: 42}], 'USD')
 
+)
